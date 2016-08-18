@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="Author" content="Made by 'tree'">
+ <meta name="GENERATOR" content="$Version: $ tree v1.7.0 (c) 1996 - 2014 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
+ <title>Directory Tree</title>
+ <style type="text/css">
+  <!-- 
+  BODY { font-family : ariel, monospace, sans-serif; }
+  P { font-weight: normal; font-family : ariel, monospace, sans-serif; color: black; background-color: transparent;}
+  B { font-weight: normal; color: black; background-color: transparent;}
+  A:visited { font-weight : normal; text-decoration : none; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:link    { font-weight : normal; text-decoration : none; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:hover   { color : #000000; font-weight : normal; text-decoration : underline; background-color : yellow; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  A:active  { color : #000000; font-weight: normal; background-color : transparent; margin : 0px 0px 0px 0px; padding : 0px 0px 0px 0px; display: inline; }
+  .VERSION { font-size: small; font-family : arial, sans-serif; }
+  .NORM  { color: black;  background-color: transparent;}
+  .FIFO  { color: purple; background-color: transparent;}
+  .CHAR  { color: yellow; background-color: transparent;}
+  .DIR   { color: blue;   background-color: transparent;}
+  .BLOCK { color: yellow; background-color: transparent;}
+  .LINK  { color: aqua;   background-color: transparent;}
+  .SOCK  { color: fuchsia;background-color: transparent;}
+  .EXEC  { color: green;  background-color: transparent;}
+  -->
+ </style>
+</head>
+<body>
+	<h1>Directory Tree</h1><p>
+	<a href="baseHREF">baseHREF</a><br>
+	├── <a href="baseHREF/bin/">bin</a><br>
+	├── <a href="baseHREF/env/">env</a><br>
+	│   ├── <a href="baseHREF/env/bin/">bin</a><br>
+	│   ├── <a href="baseHREF/env/include/">include</a><br>
+	│   │   ├── <a href="baseHREF/env/include/python2.7/">python2.7</a><br>
+	│   │   └── <a href="baseHREF/env/include/site/">site</a><br>
+	│   ├── <a href="baseHREF/env/lib/">lib</a><br>
+	│   │   └── <a href="baseHREF/env/lib/python2.7/">python2.7</a><br>
+	│   ├── <a href="baseHREF/env/local/">local</a><br>
+	│   │   ├── <a href="baseHREF/env/local/bin/">bin</a><br>
+	│   │   ├── <a href="baseHREF/env/local/include/">include</a><br>
+	│   │   └── <a href="baseHREF/env/local/lib/">lib</a><br>
+	│   └── <a href="baseHREF/env/share/">share</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/env/share/man/">man</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="baseHREF/env/share/python-wheels/">python-wheels</a><br>
+	├── <a href="baseHREF/filestore/">filestore</a><br>
+	├── <a href="baseHREF/local-addons/">local-addons</a><br>
+	│   ├── <a href="baseHREF/local-addons/my_module/">my_module</a><br>
+	│   │   ├── <a href="baseHREF/local-addons/my_module/controllers/">controllers</a><br>
+	│   │   ├── <a href="baseHREF/local-addons/my_module/models/">models</a><br>
+	│   │   ├── <a href="baseHREF/local-addons/my_module/static/">static</a><br>
+	│   │   └── <a href="baseHREF/local-addons/my_module/views/">views</a><br>
+	│   └── <a href="baseHREF/local-addons/my_scaffolded/">my_scaffolded</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/local-addons/my_scaffolded/controllers/">controllers</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/local-addons/my_scaffolded/demo/">demo</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/local-addons/my_scaffolded/models/">models</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/local-addons/my_scaffolded/security/">security</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="baseHREF/local-addons/my_scaffolded/views/">views</a><br>
+	├── <a href="baseHREF/logs/">logs</a><br>
+	└── <a href="baseHREF/src/">src</a><br>
+	&nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/odoo/">odoo</a><br>
+	&nbsp;&nbsp;&nbsp; │   ├── <a href="baseHREF/src/odoo/addons/">addons</a><br>
+	&nbsp;&nbsp;&nbsp; │   ├── <a href="baseHREF/src/odoo/debian/">debian</a><br>
+	&nbsp;&nbsp;&nbsp; │   ├── <a href="baseHREF/src/odoo/doc/">doc</a><br>
+	&nbsp;&nbsp;&nbsp; │   ├── <a href="baseHREF/src/odoo/openerp/">openerp</a><br>
+	&nbsp;&nbsp;&nbsp; │   └── <a href="baseHREF/src/odoo/setup/">setup</a><br>
+	&nbsp;&nbsp;&nbsp; └── <a href="baseHREF/src/partner-contact/">partner-contact</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/account_partner_merge/">account_partner_merge</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/base_contact/">base_contact</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/base_continent/">base_continent</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/base_location/">base_location</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/base_location_geonames_import/">base_location_geonames_import</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/base_location_nuts/">base_location_nuts</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/base_partner_merge/">base_partner_merge</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/base_partner_sequence/">base_partner_sequence</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/firstname_display_name_trigger/">firstname_display_name_trigger</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_address_street3/">partner_address_street3</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_auto_salesman/">partner_auto_salesman</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_contact_address_detailed/">partner_contact_address_detailed</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_contact_birthdate/">partner_contact_birthdate</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_contact_gender/">partner_contact_gender</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_contact_in_several_companies/">partner_contact_in_several_companies</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_contact_nationality/">partner_contact_nationality</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_contact_personal_information_page/">partner_contact_personal_information_page</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_external_map/">partner_external_map</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_firstname/">partner_firstname</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_helper/">partner_helper</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_identification/">partner_identification</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_relations/">partner_relations</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/partner_street_number/">partner_street_number</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/passport/">passport</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/portal_partner_merge/">portal_partner_merge</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="baseHREF/src/partner-contact/res_partner_affiliate/">res_partner_affiliate</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="baseHREF/src/partner-contact/setup/">setup</a><br>
+	<br><br>
+	</p>
+	<p>
+
+64 directories
+	<br><br>
+	</p>
+	<hr>
+	<p class="VERSION">
+		 tree v1.7.0 © 1996 - 2014 by Steve Baker and Thomas Moore <br>
+		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
+		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
+		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
+	</p>
+</body>
+</html>

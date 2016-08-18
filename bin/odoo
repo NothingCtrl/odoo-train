@@ -1,0 +1,6 @@
+#!/bin/sh
+ROOT=$(dirname $0)/..
+PYTHON=$ROOT/env/bin/python
+ODOO=$ROOT/src/odoo/odoo.py
+$PYTHON $ODOO -c $ROOT/odoo-train.cfg --db-filter OdooTrain
+exit $?d
