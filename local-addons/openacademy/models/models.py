@@ -2,14 +2,20 @@
 
 from openerp import models, fields, api
 
-# class openacademy(models.Model):
-#     _name = 'openacademy.openacademy'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+class MinimalModel(models.Model):
+    _name = 'test.model'
+    name = fields.Char(required=True)
+
+
+class LessMinimalModel(models.Model):
+    _name = 'test.model2'
+    name = fields.Char(required=True)
+
+
+class Course(models.Model):
+    _name = 'openacademy.course'
+
+    name = fields.Char(string="Title", required=True)
+    description = fields.Text()
+
