@@ -1,0 +1,14 @@
+.idea
+# dotfiles, with exceptions:
+# .*
+#.gitignore
+# python compiled files
+*.py[co]
+# emacs backup files
+*~
+# not tracked subdirectories
+env
+/env/
+/src/
+/filestore/
+/logs/
