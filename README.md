@@ -5,6 +5,8 @@ Showcase feature of Odoo 13.0 CE
 ## List of function(s) / feature(s)
 
 * UI View
+  * Menu, sub-menu
+  * Wizard
   * Form
     * Smart button (Example with field `active`)
     * Widget
