@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- form view of model feature.demo.config -->
+        <record id="feature_demo_config_form_view" model="ir.ui.view">
+            <field name="name">feature.demo.config.form.view</field>
+            <field name="model">feature.demo.config</field>
+            <field name="arch" type="xml">
+                <form string="Config Form">
+                    <sheet>
+                        <div name="button_box" class="oe_button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <span attrs="{'invisible': [('active', '=', False)]}">Archive</span>
+                                <span attrs="{'invisible': [('active', '=', True)]}">Restore</span>
+                            </button>
+                        </div>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                        <group>
+                            <field name="active" invisible="1"/>
+                            <field name="name"/>
+                            <field name="value"/>
+                            <field name="priority"/>
+                            <field name="categ_id" options="{'no_create': True}"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}'/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- tree view of model feature.demo.config -->
+        <record id="feature_demo_config_tree_view" model="ir.ui.view">
+            <field name="name">feature.demo.config.tree.view</field>
+            <field name="model">feature.demo.config</field>
+            <field name="arch" type="xml">
+                <tree string="Config Tree">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="value"/>
+                    <field name="create_date"/>
+                    <field name="write_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- graph view of model feature.demo.config -->
+        <record id="feature_demo_config_graph_view" model="ir.ui.view">
+            <field name="name">feature.demo.config.graph.view</field>
+            <field name="model">feature.demo.config</field>
+            <field name="arch" type="xml">
+                <graph string="Config Graph">
+                    <field name="name"/>
+                    <field name="value" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- pivot view of model feature.demo.config -->
+        <record id="feature_demo_config_pivot_view" model="ir.ui.view">
+            <field name="name">feature.demo.config.pivot.view</field>
+            <field name="model">feature.demo.config</field>
+            <field name="arch" type="xml">
+                <pivot string="Config Pivot">
+                    <field name="name" type="col"/>
+                    <field name="value" type="row"/>
+                    <field name="priority" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <!-- kanban view of model feature.demo.config -->
+        <record id="feature_demo_config_kanban_view" model="ir.ui.view">
+            <field name="name">feature.demo.config.kanban.view</field>
+            <field name="model">feature.demo.config</field>
+            <field name="arch" type="xml">
+                <kanban string="Config Kanban">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="value"/>
+                    <field name="create_uid"/> <!-- need to read image -->
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                <div class="o_dropdown_kanban dropdown">
+                                    <a role="button" class="dropdown-toggle o-no-caret btn" data-toggle="dropdown"
+                                       href="#" aria-label="Dropdown menu" title="Dropdown menu">
+                                        <span class="fa fa-ellipsis-v"/>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        <t t-if="widget.editable"><li><a role="menuitem" type="edit"
+                                                                         class="dropdown-item">Edit...</a></li></t>
+                                        <t t-if="widget.deletable"><li><a role="menuitem" type="delete"
+                                                                          class="dropdown-item">Delete</a></li></t>
+                                    </ul>
+                                </div>
+                                <div class="oe_kanban_content">
+                                    <div class="mt4">
+                                        <div><h4><field name="name"/></h4></div>
+                                        <div><span class="badge badge-pill"><span>Record ID: </span><field name="id"/></span></div>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <img t-att-src="kanban_image('res.users', 'image_128', record.create_uid.raw_value)"
+                                             t-att-title="record.create_uid.value" width="27" height="27"
+                                             class="oe_kanban_avatar rounded-circle" t-att-alt="record.id"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- search view of model feature.demo.config -->
+        <record id="feature_demo_config_search_view" model="ir.ui.view">
+            <field name="name">feature.demo.config.search.view</field>
+            <field name="model">feature.demo.config</field>
+            <field name="arch" type="xml">
+                <search string="Config Search">
+                    <field name="name" string="Carrier"/>
+                    <field name="id"/>
+                    <separator/>
+                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                    <group expand="1" string="Group By">
+                        <filter string="Update date" name="update_date" context="{'group_by':'write_date'}"/>
+                    </group>
+                    <searchpanel>
+                        <field name="categ_id" icon="fa-object-group"/>
+                        <field name="create_uid" icon="fa-users"/>
+                    </searchpanel>
+                </search>
+            </field>
+        </record>
+
+        <record id="feature_demo_config_action" model="ir.actions.act_window">
+            <field name="name">Feature Config</field>
+            <field name="res_model">feature.demo.config</field>
+            <field name="view_mode">tree,pivot,graph,form,kanban</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Define a new config value
+                </p>
+                <p>
+                    Use config to set demo feature preference, config name should use without space
+                </p>
+                <p>
+                    Example config: name "email_send_to_address", value "foo@bar.local"
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

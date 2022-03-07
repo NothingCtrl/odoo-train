@@ -1,0 +1,8 @@
+<odoo>
+    <data>
+          <record id="demo_config_value_1" model="feature.demo.config">
+            <field name="name">config_name_1</field>
+            <field name="value">value of config 1</field>
+          </record>
+    </data>
+</odoo>

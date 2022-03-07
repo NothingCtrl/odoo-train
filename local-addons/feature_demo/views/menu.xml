@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- root menu -->
+        <menuitem name="Feature Demo" id="menu_feature_demo_root" sequence="1000" groups="base.group_system"
+                  web_icon="feature_demo,static/description/icon.png"/>
+        <!-- L1 menu -->
+        <menuitem name="Config" id="menu_feature_demo_config" parent="menu_feature_demo_root"
+                  groups="base.group_system" sequence="10"/>
+        <menuitem name="Wizard" id="menu_feature_demo_wizard" parent="menu_feature_demo_root"
+                  groups="base.group_system" sequence="20"/>
+        <!-- L2 menu -->
+        <menuitem name="Config Value" id="menu_feature_demo_config_menu_1" parent="menu_feature_demo_config"
+                  action="feature_demo_config_action"
+                  groups="base.group_system" sequence="10"/>
+        <menuitem name="Config Category" id="menu_feature_demo_config_menu_2" parent="menu_feature_demo_config"
+                  action="feature_demo_config_category_action"
+                  groups="base.group_system" sequence="20"/>
+        <menuitem name="Send Odoo Bot Notification" id="menu_feature_demo_wizard1" parent="menu_feature_demo_wizard"
+                  action="wizard_send_odoo_bot_notification_action"
+                  groups="base.group_system" sequence="10"/>
+    </data>
+</odoo>
